@@ -1,0 +1,16 @@
+Mixing UI inside of a
+
+Create A new scene called Canvas World Space
+
+创建一个Button，切换成3D模式，to create 2 3D cubes
+
+通过位移按钮（第二个，手掌旁边）进行水平或垂直移动
+
+Position 位置
+Rotation 旋转
+Scale 长宽高 of cube
+
+点击Main Camera，右方的Projection，将Orthographic改变成Perspective，
+Game里能看到button后面的cube
+
+将Canvas的Mode转成World Space，我们可以在3D 场里移动Canvas，可以将button以3D的形式随意移动，水平/垂直/旋转。World Space就是为了3D模式存在。
