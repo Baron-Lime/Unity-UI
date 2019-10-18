@@ -1,0 +1,7 @@
+选择Screen Space - Camera之后，把Main Camera拖入Render Camera
+
+然后，Scene中的button依然存在，但需要放大才能看见，在camera的中心处
+双击Hierarchy的button，再单击顶部的Main Camera就能直接看见了
+
+如果新建一个Camera或者删掉Main Camera，Game 界面里的UI会go away，因为这个Canvas 与这个Main Camera是紧密连接的。
+这就允许我们分离多个用户界面，一个Camera对应一个UI，比如2-player game。在界面运行时出现，不运行时隐藏。
