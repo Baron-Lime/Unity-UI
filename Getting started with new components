@@ -1,0 +1,4 @@
+
+01  Getting started with new components
+初始状态，添加GameObject 里UI 任意一个Component，都会产生Canvas，其目录下包含你的Component，同时还有产生一个与Canvas 同级的EventSystem。
+Canvas 和EventSystem里都有Transform的东西，都可以有Script。还可以直接在Canvas右键，选择Component。
