@@ -1,0 +1,17 @@
+Canvas is made up with 3 scripts：Canvas，Canvas Scaler， Graphic Raycaster
+※Canvas（script）：3 Render Mode
+Screen Space - Overlay
+Canvas will sit on top of everything in our scene no matter which camera is actually in focus 最顶层。
+Pixel Perfect：Want your artwork to be aligned to a pixel grid.
+
+Screen Space - Camera
+World Space
+
+※The Canvas Scaler：3 UI Scale Mode
+The Canvas Scaler allowed you to scale the UI up and down based on the resolution. Currently, it's set to a constant pixel size. You can change it depend on your need.
+Constant Pixel Size
+Scale With Screen Size
+Constant Physical Size
+
+※Graphic Raycaster：建立交互动作
+Responsible for getting input into the UI system. Without it，your UI cannot accept mouse clicks，keyboard events，or touch events.
