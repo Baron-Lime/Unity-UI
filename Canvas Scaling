@@ -1,0 +1,35 @@
+Talk about Canvas Scaler（Script）
+Reference Pixels Per + 数值，决定button的圆角
+系统默认是100，如果要建立自己的UI set，请确保圆角数值一致
+
+UI Scale Mode
+改变Mode，Button的大小也会改变，会适应屏幕变化 match the canvas to a specific resolution
+
+Constant Pixel Size：
+连续的像素大小，这也就意味着，布局的UI元素都是实际的大小。如在当前分辨率界面上建了一个50px*50px 那么当你的分辨率变大时，你就要重新设置，不然50*50在新的分辨率下就会非常难看。而且像素大小，即使没有改变分辨率，在不同设备上的表现也会不一样。
+
+Scale with screen size：
+和屏幕大小一起缩放。确保不同分辨率，不同设备上，UI不会出现大的偏差。
+
+Constant physical size：
+连续的物理大小，与第一条相对，在不同像素的设备上都一样。如2cm*2cm
+
+Reference Solution：
+参考分辨率，可手动设置，一般推荐使用1600*900
+
+Screen Match Mode 与Reference Solution搭配使用：
+在Game 视口下：Display 1 右边有一个比值，如16：10，这个就是实际的视口宽高比，而这个如果和我们的Reference Solution不一样，我们要改变。
+
+Match width or height（匹配宽或高）
+出现滚动条，左宽右高，滚动条的数值代表宽，高的权重，0代表宽优先，1代表高优先，0.5代表双方权重一样，一起缩放。
+Landscape game横屏：width
+Portrait game竖屏： height
+
+Expand（扩张）：如果视口比小于参考分辨率，以5：4为例，那么视图就会将1600*900扩张到1600*1280，也就是宽扩张，多余的部分用蓝色填充，蓝色这个是天空盒，可以设置。有时一侧会出现黑色，不用理会。
+
+Shrink（收缩）：同理
+
+Reference pixels per Unit（每个单位的参考像素点，多针对Sprite）：这是个默认值，只有当Sprite本身没有Reference pixels per Unit这个属性时才会使用，否则Sprite本身的属性会覆盖掉默认值。默认100
+用处：我们设计了一个2单位*2单位的Sprite，然后没有设置RPPU，Unity就会将其变成200px*200px的Sprite
+
+Free Aspect：在Game 中显示的屏幕比例/大小，尽量与reference solution match up
